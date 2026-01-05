@@ -1,0 +1,16 @@
+package emp_details;
+import org.hibernate.SessionFactory;
+
+public class HibernateUtil {
+    private static SessionFactory factory;
+
+    static {
+        factory = new Configuration().configure().buildSessionFactory();
+    }
+    public static SessionFactory getSessionFactory() {
+        return factory;
+    }
+
+
+
+}
